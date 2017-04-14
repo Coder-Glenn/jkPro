@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.graduation.entity">
+	<class name="TextCode" table="TEXT_CODE_C">
+		<id name="id" column="TEXT_CODE_ID" type="string">
+			<generator class="uuid"/>
+		</id>
+		<property name="name" column="NAME" type="string"/>
+		<many-to-one name="classCode" class="cn.graduation.entity.ClassCode" lazy="false" column="CLASS_CODE_ID"/>
+	</class>
+</hibernate-mapping>

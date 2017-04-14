@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+  "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+  "http://struts.apache.org/dtds/struts-2.3.dtd">
+  
+<struts>
+  <package name="baseinfo" namespace="/baseinfo" extends="struts-default">
+    <action name="classCodeAction_*" method="{1}" class="cn.graduation.web.struts2.baseinfo.classcode.ClassCodeAction">
+      <result name="plist">/baseinfo/classcode/jClassCodeList.jsp</result>
+      <result name="pcreate">/baseinfo/classcode/jClassCodeCreate.jsp</result>
+      <result name="pupdate">/baseinfo/classcode/jClassCodeUpdate.jsp</result>
+    </action>
+    <action name="textCodeAction_*" method="{1}" class="cn.graduation.web.struts2.baseinfo.textcode.TextCodeAction">
+      <result name="plist">/baseinfo/textcode/jTextCodeList.jsp</result>
+      <result name="pview">/baseinfo/textcode/jTextCodeView.jsp</result>
+      <result name="pcreate">/baseinfo/textcode/jTextCodeCreate.jsp</result>
+      <result name="pupdate">/baseinfo/textcode/jTextCodeUpdate.jsp</result>
+    </action>
+  </package>
+</struts>  

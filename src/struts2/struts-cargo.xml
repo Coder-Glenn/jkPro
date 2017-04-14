@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+	<package name="cargo" namespace="/cargo" extends="struts-default">
+		<action name="contractAction_*" method="{1}" class="cn.graduation.web.struts2.cargo.contract.ContractAction">
+			<result name="plist">/cargo/contract/jContractList.jsp</result>
+			<result name="pview">/cargo/contract/jContractView.jsp</result>
+			<result name="pcreate">/cargo/contract/jContractCreate.jsp</result>
+			<result name="pupdate">/cargo/contract/jContractUpdate.jsp</result>
+		</action>
+		<action name="contractProductAction_*" method="{1}" class="cn.graduation.web.struts2.cargo.contract.ContractProductAction">
+			<result name="pcreate">/cargo/contract/jContractProductCreate.jsp</result>
+		</action>
+		<action name="extCproductAction_*" method="{1}" class="cn.graduation.web.struts2.cargo.extcproduct.ExtCproductAction">
+			<result name="pcreate">/cargo/extcproduct/jExtCproductCreate.jsp</result>
+		</action>
+	</package>
+	
+	<package name="outproduct" namespace="/outproduct" extends="struts-default">
+		<action name="outProductAction_*" method="{1}" class="cn.graduation.web.struts2.cargo.outproduct.OutProductAction">
+			<result name="pedit">/cargo/outproduct/jOutProduct.jsp</result>
+		</action>
+	</package>
+	
+  	<package name="export" namespace="/export" extends="struts-default">
+  		<action name="exportAction_*" method="{1}" class="cn.graduation.web.struts2.cargo.export.ExportAction">
+  			<result name="plist">/cargo/export/jExportList.jsp</result>
+  			<result name="pview">/cargo/export/jExportView.jsp</result>
+  			<result name="pviewinfo">/cargo/export/jExportViewInfo.jsp</result>
+  			<result name="pupdate">/cargo/export/jExportUpdate.jsp</result>
+  		</action>
+  	</package>
+	
+	<package name="packinglist" namespace="/packinglist" extends="struts-default">
+		<action name="packingListAction_*" method="{1}" class="cn.graduation.web.struts2.cargo.packinglist.PackingListAction">
+			<result name="plist">/cargo/packinglist/jPackingListList.jsp</result>
+			<result name="pcreate">/cargo/packinglist/jPackingListCreate.jsp</result>
+			<result name="pupdate">/cargo/packinglist/jPackingListUpdate.jsp</result>
+			<result name="pview">/cargo/packinglist/jPackingListView.jsp</result>
+		</action>
+	</package>
+	
+	<package name="shippingorder" namespace="/shippingorder" extends="struts-default">
+		<action name="shippingOrderAction_*" method="{1}" class="cn.graduation.web.struts2.cargo.shippingorder.ShippingOrderAction">
+			<result name="pedit">/cargo/shippingorder/jShippingOrderEdit.jsp</result>
+		</action>
+	</package>
+
+	<package name="invoice" namespace="/invoice" extends="struts-default">
+		<action name="invoiceAction_*" method="{1}" class="cn.graduation.web.struts2.cargo.invoice.InvoiceAction">
+			<result name="pedit">/cargo/invoice/jInvoiceEdit.jsp</result>
+		</action>
+	</package>
+	
+	<package name="finance" namespace="/finance" extends="struts-default">
+		<action name="financeAction_*" method="{1}" class="cn.graduation.web.struts2.cargo.finance.FinanceAction">
+			<result name="pedit">/cargo/finance/jFinanceEdit.jsp</result>
+		</action>
+	</package> 
+	
+
+</struts>	

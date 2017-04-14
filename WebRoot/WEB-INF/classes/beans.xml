@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                           http://www.springframework.org/schema/aop 
+                           http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+                           http://www.springframework.org/schema/context 
+                           http://www.springframework.org/schema/context/spring-context-3.0.xsd
+                           http://www.springframework.org/schema/tx 
+                           http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+
+	<!-- 1:创建SessionFactory对象，这是spring整合Hibernate的核心 -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="configLocation">
+			<value>classpath:hibernate.cfg.xml</value>
+		</property>
+	</bean>
+	
+	<!-- 2:加载DAO对象 -->
+	<bean id="daoRoot" class="cn.graduation.entity.dao._RootDAO" autowire="byName"/>
+	<bean id="daoTestTable" class="cn.graduation.entity.dao.TestTableDAO" autowire="byName"/>
+	
+	<bean id="daoClassCode" class="cn.graduation.entity.dao.ClassCodeDAO" autowire="byName"/>
+	<bean id="daoTextCode" class="cn.graduation.entity.dao.TextCodeDAO" autowire="byName"/>
+	<bean id="daoSysCode" class="cn.graduation.entity.dao.SysCodeDAO" autowire="byName"/>
+	<bean id="daoFactory" class="cn.graduation.entity.dao.FactoryDAO" autowire="byName"/>
+	
+	<bean id="daoContract" class="cn.graduation.entity.dao.ContractDAO" autowire="byName"/>
+	<bean id="daoContractProduct" class="cn.graduation.entity.dao.ContractProductDAO" autowire="byName"/>
+	<bean id="daoExtCproduct" class="cn.graduation.entity.dao.ExtCproductDAO" autowire="byName"/>
+	
+	<bean id="daoExport" class="cn.graduation.entity.dao.ExportDAO" autowire="byName"/>
+	<bean id="daoExportProduct" class="cn.graduation.entity.dao.ExportProductDAO" autowire="byName"/>
+	<bean id="daoExtEproduct" class="cn.graduation.entity.dao.ExtEproductDAO" autowire="byName"/>
+	
+	<bean id="daoPackingList" class="cn.graduation.entity.dao.PackingListDAO" autowire="byName"/>
+	<bean id="daoShippingOrder" class="cn.graduation.entity.dao.ShippingOrderDAO" autowire="byName"/>
+	<bean id="daoInvoice" class="cn.graduation.entity.dao.InvoiceDAO" autowire="byName"/>
+	<bean id="daoFinance" class="cn.graduation.entity.dao.FinanceDAO" autowire="byName"/>
+	
+</beans>        

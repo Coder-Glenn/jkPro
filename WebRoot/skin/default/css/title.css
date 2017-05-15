@@ -50,7 +50,7 @@
 	position:relative;
 }
 .titleDate{float:left;height:29px;width:200px;text-align:left;color:#fff; line-height:29px; font-size:12px;font-weight:normal;padding-left:30px;}
-#menuContent{ bomargin-top:0px;height:29px;left:0px;position:absolute;padding:0px 5px 0px 5px; font-size:12px;}
+#menuContent{ bomargin-top:0px;height:25px;left:190px;position:absolute;padding:4px 5px 0px 5px; font-size:12px;}
 #topmenu{ margin-top:1px;padding:6px 11px 5px 13px;color:white;height:29px;cursor:pointer; overflow:hiddle; }
 #tm_separator{ height:28px;width:2px;background:url(/skin/default/images/title/tm_separator.jpg) no-repeat;}
 #prompt_div{

@@ -38,15 +38,16 @@
         <div class="panel-content">
 			<ul>
 				
-					<li><a href="/cargo/contractAction_list" target="main" id="aa_1">合同管理</a></li>
+					<li><a href="contract/jContractList.jsp" target="main" id="aa_1">合同管理</a></li>
 				
 				
-					<li><a href="/export/exportAction_list" target="main" id="aa_1">报运管理</a></li>
+					<li><a href="export/jExportList.jsp" target="main" id="aa_1">报运管理</a></li>
 				
 				
-					<li><a href="/packinglist/packingListAction_list" target="main" id="aa_1">装箱管理</a></li>
+					<li><a href="packinglist/jPackingListList.jsp" target="main" id="aa_1">装箱管理</a></li>
 				
-
+				
+				
 			</ul>
         </div>
         </div>
@@ -59,44 +60,6 @@
 </div>	  
 <!-- end1 -->
  
- 
-
-
-<!-- begin1  -->
-<div id="sidebar" class="sidebar">
-	<div class="sidebar_t">
-		<div class="sidebar_t_l"></div>
-		<div class="sidebar_t_c"></div>
-		<div class="sidebar_t_r"></div>
-	</div>
-    <div class="panel">
-    	<div class="panel_icon"><img src="../skin/default/images/icon/chart.png" /></div>
-        <div class="panel-header">
-        <div class="panel-title">统计报表</div>
-        
-        <div class="panel-content">
-			<ul>
-				<li>
-					<a href="../run/sysStatAction_factorySale" target="main" id="aa_1">厂家销售情况统计</a>
-				</li>
-				<li>
-					<a href="../run/sysStatAction_productSale" target="main" id="aa_1">产品销售排行</a>
-				</li>
-				<li>
-					<a href="../run/sysStatAction_onlineinfo" target="main" id="aa_1">系统访问压力图</a>
-				</li>
-			</ul>
-        </div>
-        </div>
-    </div> 
-           
-    <div class="sidebar_t">
-		<div class="sidebar_b_l"></div>
-		<div class="sidebar_t_c"></div>
-		<div class="sidebar_b_r"></div>
-	</div>  
-</div>
-<!-- end1 --> 
  
 	<link rel="stylesheet" rev="stylesheet" type="text/css" href="/plugin/extend_logo/extend_logo.css" media="all"/>
 	<script language="javascript" src="/plugin/extend_logo/extend_logo.js"></script>

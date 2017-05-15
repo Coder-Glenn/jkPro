@@ -26,7 +26,7 @@
 	    <property name="testConnectionOnCheckout" value="false"/>
 	</bean>
 
-  	<bean id="sqlDao" class="cn.itcast.common.springdao.SQLDAO" >
+  	<bean id="sqlDao" class="cn.graduation.common.springdao.SQLDAO" >
 		<property name="dataSource"><ref bean="nuDataSource"/></property>
 	</bean>
 

@@ -42,4 +42,4 @@
 	<bean id="daoInvoice" class="cn.graduation.entity.dao.InvoiceDAO" autowire="byName"/>
 	<bean id="daoFinance" class="cn.graduation.entity.dao.FinanceDAO" autowire="byName"/>
 	
-</beans>        
+</beans>

@@ -2,23 +2,52 @@
 
 <!-- 告诉浏览器本网页符合XHTML1.0过渡型DOCTYPE -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="gbk">
 
 	<head>
 		<title></title>
 
 		<!-- 调用样式表 -->
 		<link rel="stylesheet" rev="stylesheet" type="text/css" href="../../skin/default/css/default.css" media="all" />
-		<script type="text/javascript" src="../../js/common.js"></script>
 		<script type="text/javascript" src="../../js/tabledo.js"></script>
 
+		<link href="/plugin/jquery_upload/css/uploadify.css" rel="stylesheet" type="text/css" />
 		<script type="text/javascript" src="/components/jquery-ui/jquery-1.2.6.js"></script>
+		<script type="text/javascript" src="/plugin/jquery_upload/js/swfobject.js"></script>
+		<script type="text/javascript" src="/plugin/jquery_upload/js/jquery.uploadify.v2.1.4.js"></script>
 
 		<script language="JavaScript">
+   		
+  	function preSubmit(serviceName) {
+        if(serviceName=="返回"){
+            return true;
+        } else if (serviceName=="确定"||serviceName=="暂存"){
+			doLastTR("resultTable");	//如果最后一行为空在删除,这样就不会因_CheckAll监测最后一行为空而提示未填写了
+			return _CheckAll(true,serviceName);
+        }
+    }
 	
     $().ready(function(){
 		${mrecordData}
     });
+        
+        function setBox( id, whichno ){
+            $("#"+id).uploadify({
+                'auto'           : false,
+                'fileDesc':'请选择jpg/jpeg/gif/png文件',
+                'fileExt':'*.jpg;*.jpeg;*.gif;*.png',
+                'height'         : 16,   
+             	'width'          : 16,
+                'buttonImg'      : '/images/base-info.gif',
+                onComplete       : function (event, queueID, fileObj, response, data){ 
+                  setTxtImage( whichno,response  );
+                  $('<li></li>').appendTo('.files').text(response); }
+            });
+        }        
+        function setTxtImage( no, fileName ){
+			var o = document.getElementsByName("txtImage");
+			o[no].value = fileName;
+        }
 
 
 	/* 实现表格序号列自动调整 created by tony 20081219 */
@@ -106,6 +135,9 @@
 		oTD.style.width="10%";
 		oTD.innerHTML = "<input type=\"text\"  name=\"price\" dataType=\"非空数字\" dispName=\"单价\" size=\"5\" maxLength=\"10\" value=\""+price+"\" onBlur=\"setTRUpdateFlag(this);\">";
 		oTD.style.whiteSpace="nowrap";
+		oTD = oTR.insertCell(11);
+		oTD.innerHTML = "<span><input type=\"file\" name=\"uploadify"+rowLength+"\" id=\"uploadify"+rowLength+"\"/></span><input type=\"hidden\" name=\"txtImage\" id=\"txtImage\" value=\""+productImage+"\"/>&nbsp;<span  style=\"margin-top:-39px;\"><a href=\"javascript:jQuery('#uploadify"+rowLength+"').uploadifyUpload()\">上传</a></span>";
+		oTD.style.whiteSpace="nowrap";
 		
 		tableObj.rows[tableObj.rows.length-1].cells[3].all.contractProductNo.selectedIndex = getComboListIndex("contractProductNo",contractProductNo);
 		tableObj.rows[tableObj.rows.length-1].cells[4].all.ctype.selectedIndex = getComboListIndex("ctype",ctype);
@@ -115,6 +147,7 @@
 		dragtableinit();	//拖动表格行
 		sortnoTR();			//排序号
 
+		setBox( "uploadify"+rowLength, rowLength-1 );
 	}
 	
 	function addTypeRecord(objId, id, ctype, productRequest) {
@@ -158,7 +191,7 @@
 	</head>
 
 	<body>
-		<form method="post">
+		<form>
 			<input type="hidden" name="id" value="${id}" />
 			<input type="hidden" name="delIds" value="">
 			<input type="hidden" name="delTypeIds" value="">
@@ -168,8 +201,8 @@
 					<div id="innerMenubar">
 						<div id="navMenubar">
 							<ul>
-<li id="save"><a href="#" onclick="formSubmit('/extcproduct/extCproductAction_save','_self');">确定</a></li>
-<li id="back"><a href="/contract/contractAction_list">返回</a></li>
+								${pageButton}
+								<li id="back"><a href="doContractListAction.do">返回</a></li>
 							</ul>
 						</div>
 					</div>
@@ -180,7 +213,14 @@
 				<div class="textbox-header">
 					<div class="textbox-inner-header">
 						<div class="textbox-title">
-							编辑附件
+							编辑附件&nbsp;&nbsp; <span style="font-size:12px;color:blue">[ 打印时, 不选择则打印所有附件, 选择将只打印选择的附件。]</span>
+								
+							<div style="padding: 10px; text-align: left; font-size: 12px;">
+								打印样式：
+								<input type="radio" name="printStyle" value="1" checked class="input">一个货物
+								<input type="radio" name="printStyle" value="2" checked class="input">两个货物
+							<div>
+
 						</div>
 					</div>
 				</div>
@@ -207,6 +247,7 @@
 										<td>单位</td>
 										<td>数量</td>
 										<td>单价</td>
+										<td>照片</td>
 									</tr>
 								</table>
 							</div>

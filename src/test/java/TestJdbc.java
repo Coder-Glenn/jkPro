@@ -29,9 +29,9 @@ public class TestJdbc {
 	public void jdbcex(boolean isClose) throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException {
 		Class.forName("com.mysql.jdbc.Driver").newInstance();  
 		
-		String url = "jdbc:mysql://localhost:3306/itcastjkdb?characterEncoding=UTF-8";
+		String url = "jdbc:mysql://localhost:3306/jk?characterEncoding=UTF-8";
 		String user = "root";
-		String password = "root";
+		String password = "123456";
 		
 		Connection conn = DriverManager.getConnection(url, user,password);   
 		Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);   

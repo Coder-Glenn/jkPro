@@ -20,8 +20,14 @@
 <div id="innerMenubar">
     <div id="navMenubar">
 <ul>
-<li id="save"><a href="#" onclick="formSubmit('/cargo/contractAction_save','_self');">确定</a></li>
-<li id="back"><a href="/cargo/contractAction_list">返回</a></li>
+ 
+<li id="save"><a href="#">确定</a></li>
+<li id="save"><a href="#">暂存</a></li>
+ 
+ 
+	<li id="back">
+		<a href="jContractList.jsp">返回</a>
+	</li>
 </ul>
     </div>
 </div>
@@ -44,7 +50,7 @@
 		<table class="commonTable" cellspacing="1">
 	        <tr>
 	            <td class="columnTitle_mustbe">收&nbsp;购&nbsp;方：</td>
-	            <td class="tableContent"><input type="text" name="offeror" value="信发展有限公司" dataType="非空字符串" dispName="收购方" maxLength="200"></td>
+	            <td class="tableContent"><input type="text" name="offeror" value="杰信商贸有限公司" dataType="非空字符串" dispName="收购方" maxLength="200"></td>
 	            <td class="columnTitle">打印样式：</td>
 	            <td class="tableContentAuto">
 					<input type="radio" name="printStyle" value="1"  class="input">一个货物
@@ -56,8 +62,7 @@
 	            <td class="tableContent"><input type="text" name="contractNo" value="" dataType="非空字符串" dispName="合同号" maxLength="30"></td>
 	            <td class="columnTitle_mustbe">签单日期：</td>
 				<td class="tableContent">
-					<input type="text" style="width:90px;" name="signingDate" dataType="非空日期" dispName="签单日期" value=""
-					 onclick="WdatePicker({el:this,isShowOthers:true,dateFmt:'yyyy-MM-dd'});"/> 
+					<input type="text" style="width:90px;" name="signingDate" dataType="非空日期" dispName="签单日期" value="2013-03-04" onclick="WdatePicker({el:this,isShowOthers:true,dateFmt:'yyyy-MM-dd'});"/> 
 				</td>
 	        </tr>
 	        <tr>
@@ -77,7 +82,7 @@
 	            <td class="tableContent"><input type="text" name="customName" value="" dataType="字符串" dispName="客户名称" maxLength="200"></td>
 	            <td class="columnTitle_mustbe">船&nbsp;&nbsp;&nbsp;&nbsp;期：</td>
 				<td class="tableContent">
-					<input type="text" style="width:90px;" name="shipTime" dataType="非空日期" dispName="船期" value="" onclick="WdatePicker({el:this,isShowOthers:true,dateFmt:'yyyy-MM-dd'});"/> 
+					<input type="text" style="width:90px;" name="shipTime" dataType="非空日期" dispName="船期" value="2013-03-04" onclick="WdatePicker({el:this,isShowOthers:true,dateFmt:'yyyy-MM-dd'});"/> 
 				</td>
 	        </tr>
 	        <tr>
@@ -93,12 +98,12 @@
 				</td>
 	            <td class="columnTitle_mustbe">交&nbsp;&nbsp;&nbsp;&nbsp;期：</td>
 				<td class="tableContent">
-					<input type="text" style="width:90px;" name="deliveryPeriod" readonly dataType="非空日期" dispName="交期" value="" onclick="WdatePicker({el:this,isShowOthers:true,dateFmt:'yyyy-MM-dd'});"/> 
+					<input type="text" style="width:90px;" name="deliveryPeriod" readonly dataType="非空日期" dispName="交期" value="2013-03-04" onclick="WdatePicker({el:this,isShowOthers:true,dateFmt:'yyyy-MM-dd'});"/> 
 				</td>
 	        </tr>
 	        <tr>
 	            <td colspan="6">
-	            	<textarea name="crequest" dataType="字符串" dispName="要求" style="height:105px;" class="textarea">
+	            	<textarea name="request" dataType="字符串" dispName="要求" style="height:105px;" class="textarea">
   ★   产品与封样无明显差异，唛头、标签及包装质量务必符合公司要求。 
  ★★  产品生产前期、中期、后期抽验率不得少于10%，质量和封样一致， 
        并将验货照片传回公司。 

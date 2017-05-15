@@ -30,14 +30,11 @@
         <div class="panel-content">
 			<ul>
 					<li>
-						<a href="/baseinfo/classCodeAction_list" target="main" id="aa_1" onclick="linkHighlighted(this)">代码分类</a>
-					</li>					
-					<li>
-						<a href="/baseinfo/textCodeAction_list" target="main" id="aa_1" onclick="linkHighlighted(this)">系统代码</a>
+						<a href="syscode/jSysCode.jsp" target="main" id="aa_1" onclick="linkHighlighted(this)">系统代码</a>
 					</li>					
 				
 				
-					<li><a href="/basicinfo/factoryAction_list" onclick="linkHighlighted(this)" target="main" id="aa_1">厂家信息</a></li>
+					<li><a href="../basicinfo/factory/jFactoryList.jsp" onclick="linkHighlighted(this)" target="main" id="aa_1">厂家信息</a></li>
 				
 			</ul>
         </div>

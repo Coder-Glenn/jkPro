@@ -202,7 +202,7 @@
 <div class="headerBg">
 	<div class="top_logo">
 	    <div class="navMenu"  style="float:left;text-align:left;">
-	    		<div class="titleDate" style="float:left;">2013年03月04日 星期一</div>
+	    		<div class="titleDate" style="float:left;">2017年05月13日 星期六</div>
 	    		<div style="height:29px;">
 		    		<span id="leftKey"  onmouseover="periodOffset(this, 'left')"><img src="/skin/default/images/title/left_arrow.png"/></span>
 			    	<div class="mavMeau_top"></div>

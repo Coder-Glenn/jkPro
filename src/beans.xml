@@ -41,5 +41,5 @@
 	<bean id="daoShippingOrder" class="cn.graduation.entity.dao.ShippingOrderDAO" autowire="byName"/>
 	<bean id="daoInvoice" class="cn.graduation.entity.dao.InvoiceDAO" autowire="byName"/>
 	<bean id="daoFinance" class="cn.graduation.entity.dao.FinanceDAO" autowire="byName"/>
-	
+	<bean id="daoUser" class="cn.graduation.entity.dao.UserDAO" autowire="byName"/>
 </beans>

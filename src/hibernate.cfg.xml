@@ -38,6 +38,7 @@
 		<mapping resource="cn/graduation/entity/ShippingOrder.hbm.xml" />
 		<mapping resource="cn/graduation/entity/Invoice.hbm.xml" />
 		<mapping resource="cn/graduation/entity/Finance.hbm.xml" />
+		<mapping resource="cn/graduation/entity/User.hbm.xml" />
 		
 	</session-factory>
 </hibernate-configuration>	

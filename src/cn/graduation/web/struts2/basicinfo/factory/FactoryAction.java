@@ -28,7 +28,6 @@ public class FactoryAction extends _BaseStruts2Action implements ModelDriven<Fac
 		FactoryDAO oDao = (FactoryDAO) this.getDao("daoFactory");
 		List<Factory> dataList = oDao.find("from Factory o");
 		ActionContext.getContext().put("dataList", dataList);
-		
 		return "plist";
 	}
 	

@@ -17,4 +17,10 @@
       <result name="pupdate">/baseinfo/textcode/jTextCodeUpdate.jsp</result>
     </action>
   </package>
+  <package name="home" namespace="/home" extends="struts-default">
+  	  <action name="loginAction_*" method="{1}" class="cn.graduation.web.struts2.baseinfo.LoginAction">
+          <result name="login">/home/fmain.jsp</result>
+          <result name="toIndex">/index.jsp</result>
+    </action>
+  </package>
 </struts>  

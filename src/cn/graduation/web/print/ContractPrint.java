@@ -132,7 +132,6 @@ public class ContractPrint{
 		HSSFFont blackFont = pioUtil.blackFont12(wb);			//设置字体
 		Short rmb2Format = pioUtil.rmb2Format(wb);				//设置格式
 		Short rmb4Format = pioUtil.rmb4Format(wb);				//设置格式
-		
 
 		HSSFSheet sheet = wb.getSheetAt(0);				//选择第一个工作簿
 		wb.setSheetName(0, "购销合同");					//设置工作簿的名称

@@ -190,8 +190,8 @@
 <div class="PositionFrame_black" id="PositionFrame"></div>
 	<div id="userInfo" style="z-index:999;" onclick="HideLoginDiv()" title="点击关闭">
 		<img src="/skin/default/images/title/avataronline.gif" border="0" style="margin-top:-1px;"/>
-		您好：<strong>${_CURRENT_USER.realName}</strong>&nbsp;&nbsp;|
-		您所属单位：<strong title="${_CURRENT_USER.dept.deptNameFull}">${_CURRENT_USER.dept.deptName}</strong>&nbsp;&nbsp;
+		您好：<strong>${_CURRENT_USER.realName}Glenn Zheng</strong>&nbsp;&nbsp;|
+		您所属单位：<strong title="${_CURRENT_USER.dept.deptNameFull}">${_CURRENT_USER.dept.deptName}Augmentum</strong>&nbsp;&nbsp;
 		<img src="/skin/default/images/title/close.gif" border="0" />
 	</div>
 
@@ -202,7 +202,7 @@
 <div class="headerBg">
 	<div class="top_logo">
 	    <div class="navMenu"  style="float:left;text-align:left;">
-	    		<div class="titleDate" style="float:left;">2017年05月13日 星期六</div>
+	    		<div class="titleDate" style="float:left;">2017年05月21日 星期日</div>
 	    		<div style="height:29px;">
 		    		<span id="leftKey"  onmouseover="periodOffset(this, 'left')"><img src="/skin/default/images/title/left_arrow.png"/></span>
 			    	<div class="mavMeau_top"></div>

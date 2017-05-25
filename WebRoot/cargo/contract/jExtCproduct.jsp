@@ -59,16 +59,14 @@
  
 	<body>
 		<form>
-			<input type="hidden" name="id" value="4028817a39bcfe9f0139be8f8ac2000c" />
-			<input type="hidden" name="delIds" value="">
-			<input type="hidden" name="delTypeIds" value="">
+			<input type="hidden" name="mid" value="{mid}" />
  
 			<div id="menubar">
 				<div id="middleMenubar">
 					<div id="innerMenubar">
 						<div id="navMenubar">
 							<ul>
-								<li id="save"><a href="#">确定</a></li>
+								<li id="save"><a href="#" onclick="formSubmit('/contract/extCproductAction_save','_self');">确定</a></li>
 <li id="print"><a href="#">打印</a></li>
  
 								<li id="back"><a href="jContractList.jsp">返回</a></li>

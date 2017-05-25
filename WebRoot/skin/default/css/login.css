@@ -6,7 +6,6 @@ a:link,a:visited, a:active{ color:#bee7e5; text-decoration:none;}
 a:hover {color:#FED03F; text-decoration:underline;} 
 
 .main{ height:200px;  text-align:left; padding-top:300px; padding-left:140px;}
-
 .logo {height:80px; background:url(../images/login/logo.gif) no-repeat;}
 
 .zck{width:480px; height:90px; font-size:14px;}

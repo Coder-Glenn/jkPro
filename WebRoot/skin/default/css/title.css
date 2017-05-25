@@ -38,7 +38,7 @@
 }
 
 .top_logo {
-	background:url("/skin/default/images/login/logo.png") no-repeat -2px 2px;
+	background:url("/skin/default/images/login/logo1.png") no-repeat 60px 20px;
     height:91px;
     white-space:nowrap;
     overflow:hiddle;
